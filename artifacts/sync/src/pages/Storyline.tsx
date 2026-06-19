@@ -61,7 +61,7 @@ export default function StorylineFracturedTimelines() {
             className="z-0"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60 z-10 pointer-events-none" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center z-20 pointer-events-none text-center px-6">
+          <div className="absolute inset-0 flex flex-col items-center justify-start pt-24 z-20 pointer-events-none text-center px-6">
             <p className="font-display text-xs tracking-[0.4em] uppercase text-white/30 mb-4">The Fracture</p>
             <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 drop-shadow-2xl">
               One Moment.<br />Two Realities.
