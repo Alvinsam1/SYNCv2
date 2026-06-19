@@ -223,37 +223,68 @@ export default function Home() {
             <h3 className="font-display text-2xl md:text-3xl font-bold text-white/90">SYNC State Rings</h3>
           </div>
 
-          {/* Ring status — horizontal row across the bottom */}
+          {/* Ring Labels overlay on canvas */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="relative w-96 h-96">
+              {/* White Ring - Standby */}
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-40 text-center">
+                <div className="w-12 h-12 rounded-full border-2 border-white/30 mx-auto mb-3"></div>
+                <p className="font-display font-bold text-white/80 text-sm">STANDBY</p>
+              </div>
+
+              {/* Blue Ring - Connected */}
+              <div className="absolute right-0 top-1/2 transform translate-x-36 -translate-y-1/2 text-center">
+                <div className="w-16 h-16 rounded-full border-2 border-blue-500/30 mx-auto mb-3"></div>
+                <p className="font-display font-bold text-blue-400 text-sm">CONNECTED</p>
+              </div>
+
+              {/* Green Ring - Interaction */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-40 text-center">
+                <div className="w-20 h-20 rounded-full border-2 border-green-500/30 mx-auto mb-3"></div>
+                <p className="font-display font-bold text-green-400 text-sm">INTERACTION</p>
+              </div>
+
+              {/* Red Ring - Warning */}
+              <div className="absolute left-0 top-1/2 transform -translate-x-36 -translate-y-1/2 text-center">
+                <div className="w-24 h-24 rounded-full border-2 border-red-500/30 mx-auto mb-3"></div>
+                <p className="font-display font-bold text-red-400 text-sm">WARNING</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Ring status descriptions — horizontal row at bottom */}
           <div className="absolute bottom-12 left-0 right-0 z-20 pointer-events-none">
             <div className="flex items-start justify-between px-16 max-w-7xl mx-auto gap-12">
-  {/* Ring Labels */}
-<div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-  <div className="relative w-96 h-96">
-    {/* White Ring - Standby */}
-    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-20 text-center">
-      <div className="w-12 h-12 rounded-full border-2 border-white/30 mx-auto mb-2"></div>
-      <p className="font-display font-bold text-white/80 text-sm">STANDBY</p>
-    </div>
-
-    {/* Blue Ring - Connected */}
-    <div className="absolute right-0 top-1/2 transform translate-x-20 -translate-y-1/2 text-center">
-      <div className="w-16 h-16 rounded-full border-2 border-blue-500/30 mx-auto mb-2"></div>
-      <p className="font-display font-bold text-blue-400 text-sm">CONNECTED</p>
-    </div>
-
-    {/* Green Ring - Interaction */}
-    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-20 text-center">
-      <div className="w-20 h-20 rounded-full border-2 border-green-500/30 mx-auto mb-2"></div>
-      <p className="font-display font-bold text-green-400 text-sm">INTERACTION</p>
-    </div>
-
-    {/* Red Ring - Warning */}
-    <div className="absolute left-0 top-1/2 transform -translate-x-20 -translate-y-1/2 text-center">
-      <div className="w-24 h-24 rounded-full border-2 border-red-500/30 mx-auto mb-2"></div>
-      <p className="font-display font-bold text-red-400 text-sm">WARNING</p>
-    </div>
-  </div>
-</div>
+              {/* Standby */}
+              <div className="text-center flex-1">
+                <div className="w-px h-4 bg-white/30 mx-auto mb-2" />
+                <p className="font-display font-bold text-white text-base md:text-xl tracking-widest uppercase">Standby</p>
+                <p className="text-white/50 text-xs font-display tracking-[0.2em] uppercase mt-1">Ready</p>
+                <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">Prepared to track interactions and synchronize data.</p>
+              </div>
+              {/* Warning */}
+              <div className="text-center flex-1">
+                <div className="w-px h-4 bg-red-400/40 mx-auto mb-2" />
+                <p className="font-display font-bold text-red-400 text-base md:text-xl tracking-widest uppercase">Warning</p>
+                <p className="text-red-400/60 text-xs font-display tracking-[0.2em] uppercase mt-1">Alert</p>
+                <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">A system event requires attention or verification.</p>
+              </div>
+              {/* Connected */}
+              <div className="text-center flex-1">
+                <div className="w-px h-4 bg-blue-400/40 mx-auto mb-2" />
+                <p className="font-display font-bold text-blue-400 text-base md:text-xl tracking-widest uppercase">Connected</p>
+                <p className="text-blue-400/60 text-xs font-display tracking-[0.2em] uppercase mt-1">Connected</p>
+                <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">Real-time communication with the SYNC platform is active.</p>
+              </div>
+              {/* Interaction */}
+              <div className="text-center flex-1">
+                <div className="w-px h-4 bg-green-400/40 mx-auto mb-2" />
+                <p className="font-display font-bold text-green-400 text-base md:text-xl tracking-widest uppercase">Interaction</p>
+                <p className="text-green-400/60 text-xs font-display tracking-[0.2em] uppercase mt-1">Detected</p>
+                <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">Player interactions are captured and instantly logged.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
