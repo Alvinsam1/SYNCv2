@@ -225,36 +225,39 @@ export default function Home() {
 
           {/* Ring status — horizontal row across the bottom */}
           <div className="absolute bottom-12 left-0 right-0 z-20 pointer-events-none">
-            <div className="flex items-start justify-around px-8 max-w-5xl mx-auto">
-              {/* Standby */}
-              <div className="text-center flex-1">
-                <div className="w-px h-4 bg-white/30 mx-auto mb-2" />
-                <p className="font-display font-bold text-white text-base md:text-xl tracking-widest uppercase">Standby</p>
-                <p className="text-white/50 text-xs font-display tracking-[0.2em] uppercase mt-1">Ready</p>
-                <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">Prepared to track interactions and synchronize data.</p>
-              </div>
-              {/* Warning */}
-              <div className="text-center flex-1">
-                <div className="w-px h-4 bg-red-400/40 mx-auto mb-2" />
-                <p className="font-display font-bold text-red-400 text-base md:text-xl tracking-widest uppercase">Warning</p>
-                <p className="text-red-400/60 text-xs font-display tracking-[0.2em] uppercase mt-1">Alert</p>
-                <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">A system event requires attention or verification.</p>
-              </div>
-              {/* Connected */}
-              <div className="text-center flex-1">
-                <div className="w-px h-4 bg-blue-400/40 mx-auto mb-2" />
-                <p className="font-display font-bold text-blue-400 text-base md:text-xl tracking-widest uppercase">Connected</p>
-                <p className="text-blue-400/60 text-xs font-display tracking-[0.2em] uppercase mt-1">Connected</p>
-                <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">Real-time communication with the SYNC platform is active.</p>
-              </div>
-              {/* Interaction */}
-              <div className="text-center flex-1">
-                <div className="w-px h-4 bg-green-400/40 mx-auto mb-2" />
-                <p className="font-display font-bold text-green-400 text-base md:text-xl tracking-widest uppercase">Interaction</p>
-                <p className="text-green-400/60 text-xs font-display tracking-[0.2em] uppercase mt-1">Detected</p>
-                <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">Player interactions are captured and instantly logged.</p>
-              </div>
-            </div>
+            <div className="flex items-start justify-between px-16 max-w-7xl mx-auto gap-12">
+  {/* Standby */}
+  <div className="text-center flex-1">
+    <div className="w-px h-4 bg-white/30 mx-auto mb-2" />
+    <p className="font-display font-bold text-white text-base md:text-xl tracking-widest uppercase">Standby</p>
+    <p className="text-white/50 text-xs font-display tracking-[0.2em] uppercase mt-1">Ready</p>
+    <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">Prepared to track interactions and synchronize data.</p>
+  </div>
+  {/* Warning */}
+  <div className="text-center flex-1">
+    <div className="w-px h-4 bg-red-400/40 mx-auto mb-2" />
+    <p className="font-display font-bold text-red-400 text-base md:text-xl tracking-widest uppercase">Warning</p>
+    <p className="text-red-400/60 text-xs font-display tracking-[0.2em] uppercase mt-1">Alert</p>
+    <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">A system event requires attention or verification.</p>
+  </div>
+  {/* Connected */}
+  <div className="text-center flex-1">
+    <div className="w-px h-4 bg-blue-400/40 mx-auto mb-2" />
+    <p className="font-display font-bold text-blue-400 text-base md:text-xl tracking-widest uppercase">Connected</p>
+    <p className="text-blue-400/60 text-xs font-display tracking-[0.2em] uppercase mt-1">Connected</p>
+    <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">Real-time communication with the SYNC platform is active.</p>
+  </div>
+  {/* Interaction */}
+  <div className="text-center flex-1">
+    <div className="w-px h-4 bg-green-400/40 mx-auto mb-2" />
+    <p className="font-display font-bold text-green-400 text-base md:text-xl tracking-widest uppercase">Interaction</p>
+    <p className="text-green-400/60 text-xs font-display tracking-[0.2em] uppercase mt-1">Detected</p>
+    <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">Player interactions are captured and instantly logged.</p>
+  </div>
+</div>
+Changes Made:
+PropertyBeforeAfterEffectjustify-aroundjustify-aroundjustify-betweenForces items to edges with space betweenpx-8px-8px-16Increases horizontal padding (32px → 64px)max-w-5xlmax-w-5xlmax-w-7xlWider container (64rem → 80rem)gap(none)gap-12Adds explicit 48px gap between items
+The statuses are now significantly more spread out while maintaining their proportional layout. If you need even more spacing, change gap-12 → gap-16 or px-16 → px-20. 🎯Want to be notified when Claude responds?Notify
           </div>
         </div>
       </section>
