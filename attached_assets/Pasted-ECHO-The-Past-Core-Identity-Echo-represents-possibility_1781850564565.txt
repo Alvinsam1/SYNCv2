@@ -1,0 +1,260 @@
+ECHO
+The Past
+Core Identity
+
+Echo represents possibility.
+
+Echo exists before the catastrophe.
+
+The world still feels repairable.
+
+The player experiences the story through discovery and experimentation.
+
+What Echo Knows
+
+At the beginning:
+
+The facility appears normal.
+SYNC appears trustworthy.
+The future is unknown.
+Mira is unknown.
+
+Echo constantly asks:
+
+"What will happen if I do this?"
+
+What Echo Can Do
+
+Echo influences the future.
+
+Most actions performed by Echo create changes that Nova later discovers.
+
+Examples:
+
+Hide Objects
+
+Place a key in a compartment.
+
+Nova discovers it decades later.
+
+Leave Messages
+
+Write notes.
+
+Mark locations.
+
+Create clues.
+
+Activate Systems
+
+Turn on machinery.
+
+Unlock access routes.
+
+Store data.
+
+Make Decisions
+
+Trust or distrust SYNC.
+
+Reveal or conceal information.
+
+Choose whether to preserve evidence.
+
+Echo's Available Choices
+Practical Choices
+
+Open locker.
+
+Read documents.
+
+Activate terminals.
+
+Store objects.
+
+Send messages.
+
+Moral Choices
+
+Trust SYNC.
+
+Question SYNC.
+
+Share discoveries.
+
+Hide discoveries.
+
+Room Layout
+Theme
+
+Active Research Facility
+
+Areas
+Research Desk
+
+Contains:
+
+Notes
+Logs
+Personal items
+Mira's Locker
+
+Contains:
+
+Photographs
+Letter
+Personal belongings
+Temporal Compartment
+
+Allows objects to be transferred through time.
+
+Main Terminal
+
+Receives instructions from SYNC.
+
+Whiteboard
+
+Can be used to leave information.
+
+Experience Goal
+
+Echo creates the causes.
+
+Nova discovers the effects.
+
+NOVA
+The Future
+Core Identity
+
+Nova represents consequence.
+
+The catastrophe has already happened.
+
+Nova experiences the story through investigation.
+
+What Nova Knows
+
+At the beginning:
+
+Something went wrong.
+The facility is abandoned.
+Resources are limited.
+SYNC may not be telling the truth.
+
+Nova constantly asks:
+
+"What happened here?"
+
+What Nova Can Do
+
+Nova uncovers the past.
+
+Most gameplay revolves around discovering the consequences of Echo's actions.
+
+Access Archives
+
+Old recordings.
+
+Security footage.
+
+Research logs.
+
+Recover Objects
+
+Find items left by Echo.
+
+Find evidence.
+
+Locate hidden compartments.
+
+Interpret Evidence
+
+Understand events.
+
+Identify inconsistencies.
+
+Piece together the truth.
+
+Challenge SYNC
+
+Compare evidence against SYNC's claims.
+
+Discover contradictions.
+
+Expose hidden information.
+
+Nova's Available Choices
+Practical Choices
+
+Search archives.
+
+Open compartments.
+
+Restore systems.
+
+Analyze recordings.
+
+Moral Choices
+
+Trust SYNC.
+
+Confront SYNC.
+
+Share discoveries with Echo.
+
+Keep discoveries private.
+
+Room Layout
+Theme
+
+Abandoned Research Facility
+
+Areas
+Archive Terminal
+
+Contains:
+
+Video logs
+Audio logs
+Historical records
+Damaged Workstation
+
+Broken remnants of the past.
+
+Provides clues.
+
+Evidence Wall
+
+Photos.
+
+Reports.
+
+Timeline fragments.
+
+Future Compartment
+
+Receives transferred objects.
+
+Emergency Systems Panel
+
+Allows restoration of power and access.
+
+Relationship Between Roles
+
+The experience works because neither role is complete.
+
+Echo Has
+
+Actions
+
+Freedom
+
+Creation
+
+Nova Has
+
+Context
+
+Evidence
+
+Consequences

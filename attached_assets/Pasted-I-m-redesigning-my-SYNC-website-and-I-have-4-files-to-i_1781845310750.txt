@@ -1,0 +1,52 @@
+I'm redesigning my SYNC website and I have 4 files to integrate:
+
+1. **Home.tsx** - Complete redesign of the home page with:
+   - New hero section (title + subtext + 2 buttons)
+   - Storylines capsule cards (Fractured Timelines & Coming Soon)
+   - SYNC Mechanism section with ringsplit and ringspin animations
+   - How SYNC Works section with detailed descriptive text
+   - Companion App section
+   - Updated footer
+
+2. **Storyline.tsx** - New page showing detailed storyline content:
+   - Character profiles for Echo and Nova with image placeholders
+   - High concept explanation
+   - The central mystery (SYNC & Mira Hassan)
+   - Experience pillars
+   - Five-act story structure
+   - Three endings
+   - Supporting characters (SYNC AI, Mira Hassan)
+
+3. **App.tsx** - Updated router with new route:
+   - Added `/storyline/fractured-timelines` route pointing to Storyline component
+   - Kept all existing routes (/, /nova, /echo)
+
+4. **index.css** - Updated font system:
+   - Added Space Mono font import (primary/display font)
+   - Added Josefin Sans font import (secondary/body font)
+   - Updated CSS variables to use the new fonts:
+     - --app-font-display: 'Space Mono'
+     - --app-font-sans/--app-font-body: 'Josefin Sans'
+     - --app-font-light: 'Josefin Sans' (300 weight)
+
+**Please help me integrate these files by:**
+
+1. Replacing the old files with the new ones in the correct locations
+2. Verifying all imports and dependencies are correct
+3. Testing that the new `/storyline/fractured-timelines` route works
+4. Confirming the fonts load properly from Google Fonts
+5. Checking that the animations (ringsplit, ringspin) render without errors
+6. Making sure there are no TypeScript or React errors
+
+**Expected behavior after integration:**
+- Home page should show the new structured layout with hero, storylines, animations, and text sections
+- Clicking "Explore Storyline" button or the Fractured Timelines card should navigate to `/storyline/fractured-timelines`
+- The Storyline page should display character details, story structure, and endings
+- All text should use the new Space Mono and Josefin Sans fonts
+- Back button on Storyline page should return to home
+
+**If there are any issues:**
+- Check console for TypeScript errors
+- Verify ScrollSequenceCanvas component still works with procedural rendering
+- Confirm all CSS variables are properly scoped
+- Check that Navbar and PortalTransition components import correctly

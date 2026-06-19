@@ -1,0 +1,788 @@
+# SYNC WEBSITE MASTER BUILD SPECIFICATION
+
+Build a premium cinematic storytelling website for the project called:
+
+SYNC
+
+using:
+
+* Next.js (App Router)
+* React
+* TypeScript
+* Tailwind CSS
+* GSAP
+* ScrollTrigger
+* Framer Motion
+* Lenis Smooth Scroll
+* HTML Canvas image sequence rendering
+
+The website should feel like a blend of:
+
+* Apple Vision Pro website
+* Apple AirPods Pro launch pages
+* Nothing.tech
+* Linear
+* Arc Browser
+* Modern AAA game reveal websites
+
+The experience should feel futuristic, mysterious, cinematic, and premium.
+
+The website is not a portfolio.
+
+The website is the first chapter of a narrative universe.
+
+Every animation should feel intentional and high-end.
+
+---
+
+# AVAILABLE ASSETS
+
+The project contains image sequence folders:
+
+/hero-3d (121 frames)
+/ringsplit (121 frames)
+/ringspin (94 frames)
+/echo-door-open (61 frames)
+/nova-door-open (61 frames)
+
+These are image sequences extracted from animations.
+
+Do not autoplay.
+
+Do not use GIFs.
+
+Do not use videos.
+
+Render everything through Canvas.
+
+---
+
+# GLOBAL EXPERIENCE
+
+Use:
+
+* Lenis smooth scrolling
+* GSAP ScrollTrigger
+* Framer Motion
+* Canvas rendering
+* Parallax movement
+* Smooth section pinning
+* Cinematic transitions
+* Motion blur feeling
+* Luxury UI animations
+
+Scrolling should feel like controlling a film.
+
+Every section should have smooth transitions.
+
+The website background should remain predominantly black.
+
+Use:
+
+* White typography
+* Soft gradients
+* Glassmorphism cards
+* Subtle glows
+* Cinematic lighting
+
+---
+
+# TYPOGRAPHY
+
+Large Hero Headlines:
+
+font-weight: 700-900
+
+Body:
+
+minimal
+clean
+easy to read
+
+Large spacing.
+
+High-end Apple-like typography hierarchy.
+
+---
+
+# CONTENT SYSTEM
+
+Create:
+
+/data/content.ts
+
+Store ALL text content there.
+
+Every title.
+
+Every description.
+
+Every button label.
+
+Every card.
+
+Every quote.
+
+Everything must be editable from one file.
+
+Use placeholder content.
+
+Example:
+
+"[Hero description placeholder]"
+
+"[Nova story placeholder]"
+
+"[Technology description placeholder]"
+
+etc.
+
+---
+
+# COMPONENT STRUCTURE
+
+/components
+
+ScrollSequenceCanvas.tsx
+
+InteractiveDoor.tsx
+
+PortalTransition.tsx
+
+GlassCard.tsx
+
+FeatureCard.tsx
+
+TimelineStep.tsx
+
+SectionHeading.tsx
+
+CharacterReveal.tsx
+
+---
+
+/hooks
+
+useImageSequence.ts
+
+useHoverSequence.ts
+
+usePortalTransition.ts
+
+---
+
+# SECTION 1
+
+HERO
+
+Full screen.
+
+Pinned.
+
+Background:
+
+hero-3d sequence.
+
+Canvas rendered.
+
+Scroll controls animation progress.
+
+Frame 1 → Frame 121
+
+As user scrolls:
+
+Animation advances.
+
+Text fades and moves.
+
+Headline:
+
+SYNC
+
+Subheadline:
+
+An Interactive Narrative Experience
+
+Placeholder description.
+
+Buttons:
+
+Explore Story
+
+View Technology
+
+As final frame approaches:
+
+Text slowly disappears.
+
+Scene transitions into next section.
+
+---
+
+# SECTION 2
+
+TIME FRACTURE
+
+Pinned section.
+
+Background:
+
+ringsplit sequence.
+
+Canvas rendered.
+
+Scroll controls frame progression.
+
+Frame 1 → Frame 121
+
+Headline:
+
+Time Fracture
+
+Subheadline:
+
+A world where one decision created two realities.
+
+Placeholder description.
+
+As ring separates:
+
+Text elements subtly drift apart.
+
+At final frame:
+
+Reveal two paths.
+
+Left path.
+
+Right path.
+
+Representing diverging timelines.
+
+Transition into next section.
+
+---
+
+# SECTION 3
+
+CHOOSE YOUR TIMELINE
+
+This is the centerpiece of the website.
+
+The section should feel magical.
+
+Like standing before two portals.
+
+Layout:
+
+Centered heading.
+
+Below:
+
+Two large doors.
+
+NOVA door on left.
+
+ECHO door on right.
+
+Both visible simultaneously.
+
+---
+
+INITIAL STATE
+
+Both doors display Frame 1.
+
+No movement.
+
+No autoplay.
+
+No scroll interaction.
+
+Doors remain still.
+
+Waiting for user interaction.
+
+---
+
+NOVA INTERACTION
+
+Use:
+
+nova-door-open sequence
+
+When mouse enters:
+
+Play sequence forward.
+
+Frame 1 → Frame 61.
+
+Door opens naturally.
+
+Smooth motion.
+
+60fps.
+
+When mouse leaves:
+
+Play sequence backwards.
+
+Frame 61 → Frame 1.
+
+Door closes naturally.
+
+Never jump instantly.
+
+Interpolate smoothly.
+
+---
+
+ECHO INTERACTION
+
+Use:
+
+echo-door-open sequence
+
+When mouse enters:
+
+Play forward.
+
+Frame 1 → Frame 61.
+
+When mouse leaves:
+
+Play reverse.
+
+Frame 61 → Frame 1.
+
+Smooth motion.
+
+---
+
+LIGHTING EFFECTS
+
+As Nova opens:
+
+Warm golden light spills outward.
+
+Soft volumetric rays.
+
+Subtle floating particles.
+
+Light bloom.
+
+---
+
+As Echo opens:
+
+Blue-violet glow.
+
+Mystical particles.
+
+Subtle fog.
+
+Soft bloom.
+
+---
+
+NAME REVEAL
+
+Door progress controls text opacity.
+
+As Nova begins opening:
+
+Reveal below:
+
+NOVA
+
+The Path Forward
+
+[Nova description placeholder]
+
+Fade in gradually.
+
+Opacity linked to door progress.
+
+---
+
+As Echo begins opening:
+
+Reveal below:
+
+ECHO
+
+The Path Unwritten
+
+[Echo description placeholder]
+
+Opacity linked to door progress.
+
+---
+
+SILHOUETTE EFFECT
+
+When door reaches 80% open:
+
+Reveal mysterious silhouette.
+
+Do NOT show full character.
+
+Only a vague outline.
+
+Create curiosity.
+
+---
+
+PORTAL TRANSITION
+
+IMPORTANT
+
+When the user clicks a door while it is open:
+
+The website should perform a cinematic transition.
+
+NOT a standard page load.
+
+NOT an abrupt route change.
+
+Instead:
+
+1. Door expands.
+2. Camera pushes forward.
+3. Doorway fills screen.
+4. Interior light consumes viewport.
+5. Entire website transitions into character timeline.
+
+The doorway should feel like a portal.
+
+The user should feel like they entered another reality.
+
+Transition duration:
+
+1.5–2.5 seconds.
+
+Use:
+
+GSAP timeline.
+
+Scale.
+
+Blur.
+
+Light bloom.
+
+Parallax.
+
+Camera movement.
+
+Motion blur.
+
+---
+
+AFTER CLICK
+
+NOVA leads to:
+
+/nova
+
+ECHO leads to:
+
+/echo
+
+These are dedicated cinematic story pages.
+
+---
+
+# NOVA PAGE
+
+Route:
+
+/nova
+
+Theme:
+
+Hope
+Order
+Progress
+Light
+
+Visual palette:
+
+White
+Gold
+Warm gradients
+
+Hero:
+
+Large cinematic scene.
+
+Headline:
+
+NOVA
+
+Tagline:
+
+The Path Forward
+
+Placeholder narrative content.
+
+---
+
+Sections:
+
+Origins
+
+Beliefs
+
+Key Decisions
+
+Timeline Events
+
+Future Outcomes
+
+All editable.
+
+Use placeholders.
+
+---
+
+Add subtle ambient animation.
+
+Floating particles.
+
+Parallax layers.
+
+---
+
+# ECHO PAGE
+
+Route:
+
+/echo
+
+Theme:
+
+Mystery
+Chaos
+Possibility
+Shadow
+
+Visual palette:
+
+Blue
+Purple
+Black
+
+Hero:
+
+Large cinematic scene.
+
+Headline:
+
+ECHO
+
+Tagline:
+
+The Path Unwritten
+
+Placeholder narrative content.
+
+---
+
+Sections:
+
+Origins
+
+Beliefs
+
+Key Decisions
+
+Timeline Events
+
+Future Outcomes
+
+All editable.
+
+Use placeholders.
+
+---
+
+Subtle environmental effects.
+
+Mist.
+
+Particles.
+
+Glow.
+
+---
+
+# SECTION 4
+
+THE SYNCHRONIZATION RING
+
+Use:
+
+ringspin sequence
+
+Canvas rendered.
+
+Scroll controlled.
+
+Pinned.
+
+Headline:
+
+The Synchronization Ring
+
+Feature callouts:
+
+Temporal Linking
+
+Memory Synchronization
+
+Reality Branching
+
+Decision Tracking
+
+Placeholder descriptions.
+
+Callouts animate around ring.
+
+---
+
+# SECTION 5
+
+HOW SYNC WORKS
+
+Interactive timeline.
+
+4 steps.
+
+01 Decision
+
+02 Divergence
+
+03 Synchronization
+
+04 Consequence
+
+Placeholder descriptions.
+
+Animated connecting line.
+
+---
+
+# SECTION 6
+
+TECHNOLOGY
+
+Glassmorphism grid.
+
+Cards:
+
+Interactive Story Engine
+
+State Tracking System
+
+Branching Narrative Logic
+
+Synchronization Framework
+
+Cross-Reality Persistence
+
+Future Mobile Application
+
+Placeholder descriptions.
+
+Hover animations.
+
+---
+
+# SECTION 7
+
+EXPERIENCE PREVIEW
+
+Create a futuristic room scene.
+
+Do not use supplied sequences.
+
+Build with CSS and 3D transforms.
+
+Floating panels:
+
+Choices
+
+Memories
+
+Timeline
+
+Character States
+
+Placeholder content.
+
+Subtle movement.
+
+---
+
+# SECTION 8
+
+FINAL CTA
+
+Large cinematic ending.
+
+Headline:
+
+The Story Begins With A Choice
+
+Placeholder description.
+
+Buttons:
+
+Request Demo
+
+Learn More
+
+---
+
+# PERFORMANCE REQUIREMENTS
+
+Preload image sequences.
+
+Canvas rendering only.
+
+No DOM image stacking.
+
+Use requestAnimationFrame.
+
+Responsive scaling.
+
+Lazy load sections.
+
+Maintain smooth frame rates.
+
+Target:
+
+60fps desktop.
+
+High Lighthouse score.
+
+Optimized memory usage.
+
+---
+
+# FINAL EXPERIENCE GOAL
+
+The finished website should feel like an Apple keynote website crossed with an interactive sci-fi narrative.
+
+The user begins by discovering the world of SYNC.
+
+They witness a fractured reality.
+
+They arrive at two mysterious doors.
+
+Hovering reveals Nova and Echo.
+
+Clicking a door transports them through a portal into a completely different timeline.
+
+The website should feel less like a website and more like entering a living interactive story universe.
