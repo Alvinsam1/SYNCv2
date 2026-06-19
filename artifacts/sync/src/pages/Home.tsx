@@ -205,89 +205,62 @@ export default function Home() {
       </section>
 
       {/* 4-B  RINGSPIN  (94 frames · frameStart 27 · pinned 500vh) */}
-      <section ref={ringSpinRef} className="relative h-[500vh]">
-        <div className="sticky top-0 h-screen overflow-hidden">
-          <ScrollSequenceCanvas
-            sequenceName="ringspin"
-            frameCount={94}
-            frameStart={27}
-            proceduralRender={renderRingSpin}
-            scrollContainerRef={ringSpinRef}
-            imageOffsetY={-0.06}
-            className="z-0"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 z-10 pointer-events-none" />
+<section ref={ringSpinRef} className="relative h-[500vh]">
+  <div className="sticky top-0 h-screen overflow-hidden">
+    <ScrollSequenceCanvas
+      sequenceName="ringspin"
+      frameCount={94}
+      frameStart={27}
+      proceduralRender={renderRingSpin}
+      scrollContainerRef={ringSpinRef}
+      imageOffsetY={-0.06}
+      className="z-0"
+    />
+    <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 z-10 pointer-events-none" />
 
-          {/* Section label — tight to top */}
-          <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20 text-center pointer-events-none">
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-white/90">SYNC State Rings</h3>
-          </div>
+    {/* Section label — tight to top */}
+    <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20 text-center pointer-events-none">
+      <h3 className="font-display text-2xl md:text-3xl font-bold text-white/90">SYNC State Rings</h3>
+    </div>
 
-          {/* Ring Labels overlay on canvas */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="relative w-96 h-96">
-              {/* White Ring - Standby */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-40 text-center">
-                <div className="w-12 h-12 rounded-full border-2 border-white/30 mx-auto mb-3"></div>
-                <p className="font-display font-bold text-white/80 text-sm">STANDBY</p>
-              </div>
-
-              {/* Blue Ring - Connected */}
-              <div className="absolute right-0 top-1/2 transform translate-x-36 -translate-y-1/2 text-center">
-                <div className="w-16 h-16 rounded-full border-2 border-blue-500/30 mx-auto mb-3"></div>
-                <p className="font-display font-bold text-blue-400 text-sm">CONNECTED</p>
-              </div>
-
-              {/* Green Ring - Interaction */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-40 text-center">
-                <div className="w-20 h-20 rounded-full border-2 border-green-500/30 mx-auto mb-3"></div>
-                <p className="font-display font-bold text-green-400 text-sm">INTERACTION</p>
-              </div>
-
-              {/* Red Ring - Warning */}
-              <div className="absolute left-0 top-1/2 transform -translate-x-36 -translate-y-1/2 text-center">
-                <div className="w-24 h-24 rounded-full border-2 border-red-500/30 mx-auto mb-3"></div>
-                <p className="font-display font-bold text-red-400 text-sm">WARNING</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Ring status descriptions — horizontal row at bottom */}
-          <div className="absolute bottom-12 left-0 right-0 z-20 pointer-events-none">
-            <div className="flex items-start justify-between px-16 max-w-7xl mx-auto gap-12">
-              {/* Standby */}
-              <div className="text-center flex-1">
-                <div className="w-px h-4 bg-white/30 mx-auto mb-2" />
-                <p className="font-display font-bold text-white text-base md:text-xl tracking-widest uppercase">Standby</p>
-                <p className="text-white/50 text-xs font-display tracking-[0.2em] uppercase mt-1">Ready</p>
-                <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">Prepared to track interactions and synchronize data.</p>
-              </div>
-              {/* Warning */}
-              <div className="text-center flex-1">
-                <div className="w-px h-4 bg-red-400/40 mx-auto mb-2" />
-                <p className="font-display font-bold text-red-400 text-base md:text-xl tracking-widest uppercase">Warning</p>
-                <p className="text-red-400/60 text-xs font-display tracking-[0.2em] uppercase mt-1">Alert</p>
-                <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">A system event requires attention or verification.</p>
-              </div>
-              {/* Connected */}
-              <div className="text-center flex-1">
-                <div className="w-px h-4 bg-blue-400/40 mx-auto mb-2" />
-                <p className="font-display font-bold text-blue-400 text-base md:text-xl tracking-widest uppercase">Connected</p>
-                <p className="text-blue-400/60 text-xs font-display tracking-[0.2em] uppercase mt-1">Connected</p>
-                <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">Real-time communication with the SYNC platform is active.</p>
-              </div>
-              {/* Interaction */}
-              <div className="text-center flex-1">
-                <div className="w-px h-4 bg-green-400/40 mx-auto mb-2" />
-                <p className="font-display font-bold text-green-400 text-base md:text-xl tracking-widest uppercase">Interaction</p>
-                <p className="text-green-400/60 text-xs font-display tracking-[0.2em] uppercase mt-1">Detected</p>
-                <p className="text-white/35 text-[11px] font-light mt-2 max-w-[160px] mx-auto leading-relaxed">Player interactions are captured and instantly logged.</p>
-              </div>
-            </div>
-          </div>
+    {/* Ring status descriptions — FULL WIDTH, ALIGNED WITH RING POSITIONS */}
+    <div className="absolute bottom-12 left-0 right-0 z-20 pointer-events-none">
+      <div className="flex items-start justify-between px-8 w-full">
+        {/* Standby - Left (White ring) */}
+        <div className="text-center flex-1">
+          <div className="w-px h-4 bg-white/30 mx-auto mb-2" />
+          <p className="font-display font-bold text-white text-base md:text-xl tracking-widest uppercase">Standby</p>
+          <p className="text-white/50 text-xs font-display tracking-[0.2em] uppercase mt-1">Ready</p>
+          <p className="text-white/35 text-[11px] font-light mt-2 max-w-[140px] mx-auto leading-relaxed">Prepared to track interactions and synchronize data.</p>
         </div>
-      </section>
 
+        {/* Warning - Left-Center (Red ring) */}
+        <div className="text-center flex-1">
+          <div className="w-px h-4 bg-red-400/40 mx-auto mb-2" />
+          <p className="font-display font-bold text-red-400 text-base md:text-xl tracking-widest uppercase">Warning</p>
+          <p className="text-red-400/60 text-xs font-display tracking-[0.2em] uppercase mt-1">Alert</p>
+          <p className="text-white/35 text-[11px] font-light mt-2 max-w-[140px] mx-auto leading-relaxed">A system event requires attention or verification.</p>
+        </div>
+
+        {/* Connected - Right-Center (Blue ring) */}
+        <div className="text-center flex-1">
+          <div className="w-px h-4 bg-blue-400/40 mx-auto mb-2" />
+          <p className="font-display font-bold text-blue-400 text-base md:text-xl tracking-widest uppercase">Connected</p>
+          <p className="text-blue-400/60 text-xs font-display tracking-[0.2em] uppercase mt-1">Connected</p>
+          <p className="text-white/35 text-[11px] font-light mt-2 max-w-[140px] mx-auto leading-relaxed">Real-time communication with the SYNC platform is active.</p>
+        </div>
+
+        {/* Interaction - Right (Green ring) */}
+        <div className="text-center flex-1">
+          <div className="w-px h-4 bg-green-400/40 mx-auto mb-2" />
+          <p className="font-display font-bold text-green-400 text-base md:text-xl tracking-widest uppercase">Interaction</p>
+          <p className="text-green-400/60 text-xs font-display tracking-[0.2em] uppercase mt-1">Detected</p>
+          <p className="text-white/35 text-[11px] font-light mt-2 max-w-[140px] mx-auto leading-relaxed">Player interactions are captured and instantly logged.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       {/* ══════════════════════════════════════════════════════════════════
           SECTION 5 — HOW SYNC WORKS
       ══════════════════════════════════════════════════════════════════ */}
