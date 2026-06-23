@@ -319,9 +319,9 @@ export default function Echo() {
             custom={0}
           >
             <p className="font-display text-xs tracking-[0.5em] uppercase text-purple-400/70 mb-8">The Purpose</p>
-            <h2 className="font-display text-3xl md:text-5xl font-bold mb-8 leading-tight">
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-purple-400/70 mb-8 leading-tight">
               Echo creates the causes.<br />
-              <span className="text-white/40">Nova discovers the effects.</span>
+              <span className="font-display text-3xl md:text-5xl font-bold mb-8 leading-tight">Nova discovers the effects.</span>
             </h2>
             <p className="text-white/50 font-light text-lg max-w-xl mx-auto">
               Every action in the past echoes forward. What you choose to do — or not do — shapes a reality you will never directly witness.
