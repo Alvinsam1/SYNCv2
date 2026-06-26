@@ -161,13 +161,6 @@ export default function Home() {
               Two players. Fifty years apart. One impossible choice.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 pointer-events-auto">
-              <Link
-                href="/storyline/fractured-timelines"
-                className="px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-white/90 transition-all hover:shadow-lg hover:shadow-white/20"
-                data-testid="button-explore-storyline"
-              >
-                Explore Storyline
-              </Link>
               <button
                 data-testid="button-how-it-works"
                 onClick={() => document.getElementById('how-sync-works')?.scrollIntoView({ behavior: 'smooth' })}
@@ -175,6 +168,13 @@ export default function Home() {
               >
                 How It Works
               </button>
+              <Link
+                href="/storyline/fractured-timelines"
+                className="px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-white/90 transition-all hover:shadow-lg hover:shadow-white/20"
+                data-testid="button-explore-storyline"
+              >
+                Explore Storyline
+              </Link>
             </div>
           </motion.div>
           <motion.div
