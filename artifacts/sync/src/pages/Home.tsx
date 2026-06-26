@@ -147,7 +147,7 @@ export default function Home() {
             proceduralRender={renderHero}
             scrollContainerRef={heroRef}
             imageOffsetX={0.023}
-            className="z-0"
+            className="z-0 w-full h-full"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60 z-10 pointer-events-none" />
           <motion.div
@@ -654,22 +654,10 @@ export default function Home() {
               </p>
 
               {/* ── DOWNLOAD BUTTON ── */}
-              {/*
-                TO MAKE THIS A REAL DOWNLOAD:
-                1. Upload your APK to your GitHub repo (e.g., /public/sync-companion.apk)
-                   OR host it on GitHub Releases and copy the direct download link.
-                2. Replace the href below with the full URL to your .apk file.
-                3. The `download` attribute triggers a file download instead of navigating.
-
-                Example with GitHub release:
-                href="https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/v1.0/sync-companion.apk"
-
-                Example with file in /public:
-                href="/sync-companion.apk"
-              */}
               <a
-                href="/sync-companion.apk"
-                download="sync-companion.apk"
+                href="https://expo.dev/accounts/alvinsam/projects/mobile/builds/9b70a0b8-d679-45b1-87df-188311427537"
+                target="_blank"
+                rel="noopener noreferrer"
                 data-testid="button-companion-app"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-white/90 transition-all hover:shadow-lg hover:shadow-white/20"
               >
